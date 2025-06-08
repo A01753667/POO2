@@ -3,6 +3,7 @@
 #include "circle.h"
 #include "rectangle.h"
 #include "square.h"
+#include "pentagon.h"
 
 double add_area_and_perimeter(const Figure& fig)
 {
@@ -14,8 +15,9 @@ int main()
     Circle c(2.0);
     Rectangle r(4.0, 6.0);
     Square s(5.5);
+    Pentagon p(3.0);
 
-    std::vector<Figure*> vec = {&c, &r, &s, &c};
+    std::vector<Figure*> vec = {&c, &r, &s, &c, &p};
 
     double suma_areas = 0.0;
     for (Figure* fig_ptr : vec) {
